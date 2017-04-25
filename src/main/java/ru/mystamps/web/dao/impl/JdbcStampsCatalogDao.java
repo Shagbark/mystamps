@@ -39,6 +39,7 @@ public class JdbcStampsCatalogDao implements StampsCatalogDao {
 	private final String addCatalogNumberSql;
 	private final String addCatalogNumbersToSeriesSql;
 	private final String findBySeriesIdSql;
+	private final String findByCatalogNumberCodeSql;
 	
 	public List<String> add(Set<String> catalogNumbers) {
 		Validate.validState(!"".equals(addCatalogNumberSql), "Query must be non empty");
@@ -77,4 +78,11 @@ public class JdbcStampsCatalogDao implements StampsCatalogDao {
 		);
 	}
 	
+	public List<Integer> findSeriesIdsByCatalogNumberCode(String numberCode) {
+		return jdbcTemplate.queryForList(
+			findByCatalogNumberCodeSql,
+			Collections.singletonMap("catalog_number_code", numberCode),
+			Integer.class
+		);
+	}
 }

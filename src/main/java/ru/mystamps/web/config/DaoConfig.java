@@ -58,7 +58,8 @@ public class DaoConfig {
 			jdbcTemplate,
 			env.getRequiredProperty("gibbons.create"),
 			env.getRequiredProperty("series_gibbons.add"),
-			env.getRequiredProperty("series_gibbons.find_by_series_id")
+			env.getRequiredProperty("series_gibbons.find_by_series_id"),
+			env.getRequiredProperty("series.find_series_ids_by_gibbons_number")
 		);
 	}
 	
@@ -78,7 +79,8 @@ public class DaoConfig {
 			jdbcTemplate,
 			env.getRequiredProperty("michel.create"),
 			env.getRequiredProperty("series_michel.add"),
-			env.getRequiredProperty("series_michel.find_by_series_id")
+			env.getRequiredProperty("series_michel.find_by_series_id"),
+			env.getRequiredProperty("series.find_series_ids_by_michel_number")
 		);
 	}
 	
@@ -88,7 +90,8 @@ public class DaoConfig {
 			jdbcTemplate,
 			env.getRequiredProperty("scott.create"),
 			env.getRequiredProperty("series_scott.add"),
-			env.getRequiredProperty("series_scott.find_by_series_id")
+			env.getRequiredProperty("series_scott.find_by_series_id"),
+			env.getRequiredProperty("series.find_series_ids_by_scott_number")
 		);
 	}
 	
@@ -128,7 +131,8 @@ public class DaoConfig {
 			jdbcTemplate,
 			env.getRequiredProperty("yvert.create"),
 			env.getRequiredProperty("series_yvert.add"),
-			env.getRequiredProperty("series_yvert.find_by_series_id")
+			env.getRequiredProperty("series_yvert.find_by_series_id"),
+			env.getRequiredProperty("series.find_series_ids_by_yvert_number")
 		);
 		
 	}
